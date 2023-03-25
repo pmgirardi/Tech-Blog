@@ -15,7 +15,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "seed": "node seeds/seeds.js"
+    "seed": "node seeds/index.js"
   },
   "name": "tech-blog",
   "version": "1.0.0",
