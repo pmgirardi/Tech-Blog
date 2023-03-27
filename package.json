@@ -15,12 +15,11 @@
   },
   "scripts": {
     "start": "node server.js",
-    "seed": "node seeds/index.js"
+    "seed": "node seeds/seed.js"
   },
   "name": "tech-blog",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pmgirardi/Tech-Blog.git"

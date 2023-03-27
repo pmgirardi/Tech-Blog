@@ -1,0 +1,17 @@
+<section>
+  <h2>Upate Post</h2>
+  <form class="edit_form">
+    <label for="edit_title">Title</label><br />
+    <input id="edit_title" type="text" value="{{title}}" /><br />
+    <label for="edit_content">Content</label><br />
+    <textarea
+      id="edit_content"
+      name="edit"
+      type="text"
+      form="edit_form"
+    >{{content}}</textarea><br />
+    <button type="button" id="edit_button" data-id="{{id}}">Update</button>
+    <button type="button" id="delete_button" data-id="{{id}}">Delete</button>
+  </form>
+</section>
+<script src="/js/edit.js"></script>

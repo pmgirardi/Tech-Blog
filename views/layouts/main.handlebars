@@ -1,34 +1,30 @@
-<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>User Registry</title>
-  <link rel="stylesheet" href="/css/jass.css">
-</head>
-
-<body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      User Registry
-    </h1>
-    {{#if logged_in}}
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Tech Blog</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+  <body>
     <nav>
-      <button class="btn" id="logout">logout</button>
+      <h1><a href="/">The Tech Blog</a></h1>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <!-- Conditionally render log in or log out links in navigation bar -->
+        {{#if logged_in}}
+          <li><button id="logout">Log Out</button></li>
+        {{else}}
+          <li><a id="nav_login" href="/login">Log In</a></li>
+        {{/if}}
+      </ul>
     </nav>
+    <main>
+      {{{body}}}
+    </main>
+    {{#if logged_in}}
+      <script src="/js/logout.js"></script>
     {{/if}}
-  </header>
-  <main class="container container-fluid mt-5">
-    {{{ body }}}
-  </main>
-  <footer>
-      
-  </footer>
-
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
-
+  </body>
 </html>

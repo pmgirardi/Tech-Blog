@@ -1,0 +1,31 @@
+<section>
+  <h2>Your Dashboard</h2>
+  <h3>Welcome, {{username}}.</h3>
+</section>
+{{#if articles.length}}
+  <section>
+    <h2>Posts</h2>
+    {{#each articles as |article|}}
+      <a href="/api/edit/{{article.id}}"><h3>{{article.title}}
+          Created on
+          {{format_date article.date}}</h3></a>
+    {{/each}}
+  </section>
+{{/if}}
+<section>
+  <button id="new_button">New Post +</button>
+  <form class="new_form hidden">
+    <h2>New Post</h2>
+    <label for="new_title">Title</label><br />
+    <input id="new_title" type="text" /><br />
+    <label for="new_content">Content</label><br />
+    <textarea
+      id="new_content"
+      name="new"
+      type="text"
+      form="new_form"
+    ></textarea><br />
+    <button type="submit">Create</button>
+  </form>
+</section>
+<script src="/js/new.js"></script>

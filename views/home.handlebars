@@ -1,0 +1,8 @@
+
+{{#each articles as |article|}}
+  <article>
+    <h2><a href="/article/{{article.id}}">{{article.title}}</a></h2>
+    <h3>Posted by {{article.user.username}} on {{format_date article.date}}</h3>
+    <p>{{article.content}}</p>
+  </article>
+{{/each}}

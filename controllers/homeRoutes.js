@@ -1,7 +1,7 @@
 const path = require("path");
 const router = require("express").Router();
 const { User, Article, Comment } = require("../models");
-const withAuth = require("../utils/withAuth");
+const withAuth = require('../utils/auth');
 
 // GET for Home
 router.get("/", async (req, res) => {

@@ -16,8 +16,8 @@ User.hasMany(Comment, {
 
 // Association between User and Articles
 Article.belongsTo(User, {
-  foreignKey: 'user_id'
-  onDelete: 'CASCADE'
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE',
 });
 
 // Article is defined as having many Comments that creates a foreign key in the comment table
