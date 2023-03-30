@@ -17,7 +17,7 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
   
 Screenshot of the application:
   
-![tech blog:](screenshot.PNG)
+![tech blog:](/public/imgs/screenshot.png)
    
 ## Table of Contents
 - [Description](#description)
